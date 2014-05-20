@@ -32,6 +32,9 @@ class TOC
 {
     public static function action($text, $options)
     {
+        # Remove heading syntax in pre element.
+        $text = KARAS\KARAS::replaceTextInPreElement($text, "=", "");
+
         //match group index.
         $mgiAllText = 0;
         $mgiMarks = 1;
