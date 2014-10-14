@@ -33,7 +33,7 @@ require_once("./KARAS.php");
 $text = file_get_contents("./Sample.karas");
 
 $startTime = microtime(true);
-$text = KARAS\KARAS::convert($text);
+$text = KARAS\KARAS::convert($text, KARAS\KARAS::PluginDirectory, 1);
 $time = microtime(true) - $startTime;
 
 print($text);

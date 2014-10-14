@@ -30,7 +30,7 @@
 
 class TOC
 {
-    public static function action($text, $options)
+    public static function action($options, $markedupText, $text)
     {
         # Remove heading syntax in pre element.
         $text = KARAS\KARAS::replaceTextInPreElement($text, "=", "");
@@ -106,7 +106,8 @@ class TOC
                     }
 
                     $markedupText = KARAS\KARAS::convertInlineMarkup($match[$mgiMarkedupText][0]);
-                    $markedupTexts = KARAS\KARAS::splitOptions($markedupText);
+                    $hasSpecialOption = false;
+                    $markedupTexts = KARAS\KARAS::splitOptions($markedupText, $hasSpecialOption);
                     $itemText = $markedupTexts[0];
 
                     if (count($markedupTexts) > 1)

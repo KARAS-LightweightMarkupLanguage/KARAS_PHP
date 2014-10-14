@@ -30,7 +30,7 @@
 
 class Mark
 {
-    public static function convert($markedupText, $options)
+    public static function convert($options, $markedupText)
     {
         $color = "";
 
