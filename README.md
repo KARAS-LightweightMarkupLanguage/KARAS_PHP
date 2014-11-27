@@ -17,7 +17,7 @@ If you want to get more info about KARAS, please visit [lightweightmarkuplanguag
 
 ## System requirements
 
-Need Ruby version 5.2 or later.
+Need PHP version 5.2 or later.
 
 
 
